@@ -1,0 +1,1 @@
+appcfg.py upload_data --config_file bulkloader.yaml --url=http://<url_of_mobile_shopping_assistant_backed_app>/remote_api --filename places.csv --kind=Place -e admin_email_address

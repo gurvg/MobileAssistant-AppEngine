@@ -1,0 +1,2 @@
+C:\Python27\python.exe "C:\Program Files (x86)\Google\google_appengine\appcfg.py" upload_data --config_file "E:\Dev\workspace java android\MobileAssistant-AppEngine\MobileAssistant-Data\bulkloader.yaml" --url=http://localhost:8888/remote_api --filename "E:\Dev\workspace java android\MobileAssistant-AppEngine\MobileAssistant-Data\Offers.csv" --kind=Offer -e nobody@nowhere.com
+pause

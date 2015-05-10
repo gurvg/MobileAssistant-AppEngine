@@ -1,0 +1,898 @@
+{
+ "kind": "discovery#restDescription",
+ "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/6W1YmFLv3Y9vhchC-xn162LQ4LQ\"",
+ "discoveryVersion": "v1",
+ "id": "shoppingassistant:v1",
+ "name": "shoppingassistant",
+ "version": "v1",
+ "description": "This is an API",
+ "ownerDomain": "google.com",
+ "ownerName": "google.com",
+ "packagePath": "sample.mobileassistant",
+ "icons": {
+  "x16": "http://www.google.com/images/icons/product/search-16.gif",
+  "x32": "http://www.google.com/images/icons/product/search-32.gif"
+ },
+ "protocol": "rest",
+ "baseUrl": "https://!!! ENTER YOUR APP ID HERE !!!.appspot.com/_ah/api/shoppingassistant/v1/",
+ "basePath": "/_ah/api/shoppingassistant/v1/",
+ "rootUrl": "https://!!! ENTER YOUR APP ID HERE !!!.appspot.com/_ah/api/",
+ "servicePath": "shoppingassistant/v1/",
+ "batchPath": "batch",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "CheckIn": {
+   "id": "CheckIn",
+   "type": "object",
+   "properties": {
+    "checkinDate": {
+     "type": "string",
+     "format": "date-time"
+    },
+    "key": {
+     "$ref": "Key"
+    },
+    "placeId": {
+     "type": "string"
+    },
+    "userEmail": {
+     "type": "string"
+    }
+   }
+  },
+  "CheckInCollection": {
+   "id": "CheckInCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "CheckIn"
+     }
+    }
+   }
+  },
+  "DeviceInfo": {
+   "id": "DeviceInfo",
+   "type": "object",
+   "properties": {
+    "deviceRegistrationID": {
+     "type": "string"
+    }
+   }
+  },
+  "DeviceInfoCollection": {
+   "id": "DeviceInfoCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "DeviceInfo"
+     }
+    }
+   }
+  },
+  "GeoPt": {
+   "id": "GeoPt",
+   "type": "object",
+   "properties": {
+    "latitude": {
+     "type": "number",
+     "format": "float"
+    },
+    "longitude": {
+     "type": "number",
+     "format": "float"
+    }
+   }
+  },
+  "Key": {
+   "id": "Key",
+   "type": "object",
+   "properties": {
+    "appId": {
+     "type": "string"
+    },
+    "complete": {
+     "type": "boolean"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "kind": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "namespace": {
+     "type": "string"
+    },
+    "parent": {
+     "$ref": "Key"
+    }
+   }
+  },
+  "Offer": {
+   "id": "Offer",
+   "type": "object",
+   "properties": {
+    "description": {
+     "type": "string"
+    },
+    "imageUrl": {
+     "type": "string"
+    },
+    "offerID": {
+     "type": "string"
+    },
+    "title": {
+     "type": "string"
+    }
+   }
+  },
+  "OfferCollection": {
+   "id": "OfferCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Offer"
+     }
+    }
+   }
+  },
+  "Place": {
+   "id": "Place",
+   "type": "object",
+   "properties": {
+    "address": {
+     "type": "string"
+    },
+    "key": {
+     "$ref": "Key"
+    },
+    "location": {
+     "$ref": "GeoPt"
+    },
+    "name": {
+     "type": "string"
+    },
+    "placeID": {
+     "type": "string"
+    },
+    "placeId": {
+     "type": "string"
+    }
+   }
+  },
+  "PlaceInfo": {
+   "id": "PlaceInfo",
+   "type": "object",
+   "properties": {
+    "address": {
+     "type": "string"
+    },
+    "distanceInKilometers": {
+     "type": "number",
+     "format": "double"
+    },
+    "key": {
+     "$ref": "Key"
+    },
+    "location": {
+     "$ref": "GeoPt"
+    },
+    "name": {
+     "type": "string"
+    },
+    "placeID": {
+     "type": "string"
+    },
+    "placeId": {
+     "type": "string"
+    }
+   }
+  },
+  "PlaceInfoCollection": {
+   "id": "PlaceInfoCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "PlaceInfo"
+     }
+    }
+   }
+  },
+  "Recommendation": {
+   "id": "Recommendation",
+   "type": "object",
+   "properties": {
+    "description": {
+     "type": "string"
+    },
+    "expiration": {
+     "type": "string",
+     "format": "date-time"
+    },
+    "imageUrl": {
+     "type": "string"
+    },
+    "title": {
+     "type": "string"
+    }
+   }
+  },
+  "RecommendationCollection": {
+   "id": "RecommendationCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Recommendation"
+     }
+    }
+   }
+  }
+ },
+ "resources": {
+  "checkins": {
+   "methods": {
+    "get": {
+     "id": "shoppingassistant.checkins.get",
+     "path": "checkins/{id}",
+     "httpMethod": "GET",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "response": {
+      "$ref": "CheckIn"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "insert": {
+     "id": "shoppingassistant.checkins.insert",
+     "path": "checkins",
+     "httpMethod": "POST",
+     "request": {
+      "$ref": "CheckIn",
+      "parameterName": "resource"
+     },
+     "response": {
+      "$ref": "CheckIn"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "list": {
+     "id": "shoppingassistant.checkins.list",
+     "path": "checkins",
+     "httpMethod": "GET",
+     "response": {
+      "$ref": "CheckInCollection"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "patch": {
+     "id": "shoppingassistant.checkins.patch",
+     "path": "checkins",
+     "httpMethod": "PATCH",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "request": {
+      "$ref": "CheckIn"
+     },
+     "response": {
+      "$ref": "CheckIn"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "remove": {
+     "id": "shoppingassistant.checkins.remove",
+     "path": "checkins/{id}",
+     "httpMethod": "DELETE",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "update": {
+     "id": "shoppingassistant.checkins.update",
+     "path": "checkins",
+     "httpMethod": "PUT",
+     "request": {
+      "$ref": "CheckIn",
+      "parameterName": "resource"
+     },
+     "response": {
+      "$ref": "CheckIn"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    }
+   }
+  },
+  "deviceinfos": {
+   "methods": {
+    "get": {
+     "id": "shoppingassistant.deviceinfos.get",
+     "path": "deviceinfos/{id}",
+     "httpMethod": "GET",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "response": {
+      "$ref": "DeviceInfo"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "insert": {
+     "id": "shoppingassistant.deviceinfos.insert",
+     "path": "deviceinfos",
+     "httpMethod": "POST",
+     "request": {
+      "$ref": "DeviceInfo",
+      "parameterName": "resource"
+     },
+     "response": {
+      "$ref": "DeviceInfo"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "list": {
+     "id": "shoppingassistant.deviceinfos.list",
+     "path": "deviceinfos",
+     "httpMethod": "GET",
+     "response": {
+      "$ref": "DeviceInfoCollection"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "patch": {
+     "id": "shoppingassistant.deviceinfos.patch",
+     "path": "deviceinfos",
+     "httpMethod": "PATCH",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "request": {
+      "$ref": "DeviceInfo"
+     },
+     "response": {
+      "$ref": "DeviceInfo"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "remove": {
+     "id": "shoppingassistant.deviceinfos.remove",
+     "path": "deviceinfos/{id}",
+     "httpMethod": "DELETE",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "update": {
+     "id": "shoppingassistant.deviceinfos.update",
+     "path": "deviceinfos",
+     "httpMethod": "PUT",
+     "request": {
+      "$ref": "DeviceInfo",
+      "parameterName": "resource"
+     },
+     "response": {
+      "$ref": "DeviceInfo"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    }
+   }
+  },
+  "offers": {
+   "methods": {
+    "get": {
+     "id": "shoppingassistant.offers.get",
+     "path": "offers/{id}",
+     "httpMethod": "GET",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "response": {
+      "$ref": "Offer"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "insert": {
+     "id": "shoppingassistant.offers.insert",
+     "path": "offers",
+     "httpMethod": "POST",
+     "request": {
+      "$ref": "Offer",
+      "parameterName": "resource"
+     },
+     "response": {
+      "$ref": "Offer"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "list": {
+     "id": "shoppingassistant.offers.list",
+     "path": "offer",
+     "httpMethod": "GET",
+     "parameters": {
+      "placeId": {
+       "type": "string",
+       "required": true,
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "placeId"
+     ],
+     "response": {
+      "$ref": "OfferCollection"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "patch": {
+     "id": "shoppingassistant.offers.patch",
+     "path": "offers",
+     "httpMethod": "PATCH",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "request": {
+      "$ref": "Offer"
+     },
+     "response": {
+      "$ref": "Offer"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "remove": {
+     "id": "shoppingassistant.offers.remove",
+     "path": "offers/{id}",
+     "httpMethod": "DELETE",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "update": {
+     "id": "shoppingassistant.offers.update",
+     "path": "offers",
+     "httpMethod": "PUT",
+     "request": {
+      "$ref": "Offer",
+      "parameterName": "resource"
+     },
+     "response": {
+      "$ref": "Offer"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    }
+   }
+  },
+  "places": {
+   "methods": {
+    "get": {
+     "id": "shoppingassistant.places.get",
+     "path": "places/{id}",
+     "httpMethod": "GET",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "response": {
+      "$ref": "Place"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "insert": {
+     "id": "shoppingassistant.places.insert",
+     "path": "places",
+     "httpMethod": "POST",
+     "request": {
+      "$ref": "Place",
+      "parameterName": "resource"
+     },
+     "response": {
+      "$ref": "Place"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "list": {
+     "id": "shoppingassistant.places.list",
+     "path": "place",
+     "httpMethod": "GET",
+     "parameters": {
+      "count": {
+       "type": "integer",
+       "required": true,
+       "format": "int32",
+       "location": "query"
+      },
+      "distanceInKm": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "query"
+      },
+      "latitude": {
+       "type": "string",
+       "required": true,
+       "location": "query"
+      },
+      "longitude": {
+       "type": "string",
+       "required": true,
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "count",
+      "distanceInKm",
+      "latitude",
+      "longitude"
+     ],
+     "response": {
+      "$ref": "PlaceInfoCollection"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "patch": {
+     "id": "shoppingassistant.places.patch",
+     "path": "places",
+     "httpMethod": "PATCH",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "request": {
+      "$ref": "Place"
+     },
+     "response": {
+      "$ref": "Place"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "remove": {
+     "id": "shoppingassistant.places.remove",
+     "path": "places/{id}",
+     "httpMethod": "DELETE",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "update": {
+     "id": "shoppingassistant.places.update",
+     "path": "places",
+     "httpMethod": "PUT",
+     "request": {
+      "$ref": "Place",
+      "parameterName": "resource"
+     },
+     "response": {
+      "$ref": "Place"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    }
+   }
+  },
+  "recommendations": {
+   "methods": {
+    "get": {
+     "id": "shoppingassistant.recommendations.get",
+     "path": "recommendations/{id}",
+     "httpMethod": "GET",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "response": {
+      "$ref": "Recommendation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "insert": {
+     "id": "shoppingassistant.recommendations.insert",
+     "path": "recommendations",
+     "httpMethod": "POST",
+     "request": {
+      "$ref": "Recommendation",
+      "parameterName": "resource"
+     },
+     "response": {
+      "$ref": "Recommendation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "list": {
+     "id": "shoppingassistant.recommendations.list",
+     "path": "recommendation",
+     "httpMethod": "GET",
+     "parameters": {
+      "placeId": {
+       "type": "string",
+       "required": true,
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "placeId"
+     ],
+     "response": {
+      "$ref": "RecommendationCollection"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "patch": {
+     "id": "shoppingassistant.recommendations.patch",
+     "path": "recommendations",
+     "httpMethod": "PATCH",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "request": {
+      "$ref": "Recommendation"
+     },
+     "response": {
+      "$ref": "Recommendation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "remove": {
+     "id": "shoppingassistant.recommendations.remove",
+     "path": "recommendations/{id}",
+     "httpMethod": "DELETE",
+     "parameters": {
+      "id": {
+       "type": "string",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "id"
+     ],
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    },
+    "update": {
+     "id": "shoppingassistant.recommendations.update",
+     "path": "recommendations",
+     "httpMethod": "PUT",
+     "request": {
+      "$ref": "Recommendation",
+      "parameterName": "resource"
+     },
+     "response": {
+      "$ref": "Recommendation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    }
+   }
+  }
+ }
+}

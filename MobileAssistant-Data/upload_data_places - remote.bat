@@ -1,0 +1,2 @@
+C:\Python27\python.exe "C:\Program Files (x86)\Google\google_appengine\appcfg.py" upload_data --config_file "E:\Dev\workspace java android\MobileAssistant-AppEngine\MobileAssistant-Data\bulkloader.yaml" --url=http://testendpointgg.appspot.com/remote_api --filename "E:\Dev\workspace java android\MobileAssistant-AppEngine\MobileAssistant-Data\places.csv" --kind=Place -e gurvang@gmail.com
+pause

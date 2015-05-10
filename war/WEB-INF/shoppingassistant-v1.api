@@ -1,0 +1,870 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://testendpointgg.appspot.com/_ah/api",
+  "name" : "shoppingassistant",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://testendpointgg.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "google.com",
+  "ownerName" : "google.com",
+  "packagePath" : "sample.mobileassistant",
+  "methods" : {
+    "shoppingassistant.offers.remove" : {
+      "path" : "offers/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.OfferEndpoint.remove",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "shoppingassistant.offers.get" : {
+      "path" : "offers/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.OfferEndpoint.get",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.offers.update" : {
+      "path" : "offers",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.OfferEndpoint.update",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.offers.list" : {
+      "path" : "offer",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.OfferEndpoint.list",
+      "request" : {
+        "parameters" : {
+          "placeId" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.offers.insert" : {
+      "path" : "offers",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.OfferEndpoint.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.recommendations.remove" : {
+      "path" : "recommendations/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.RecommendationEndpoint.remove",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "shoppingassistant.recommendations.get" : {
+      "path" : "recommendations/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.RecommendationEndpoint.get",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.recommendations.update" : {
+      "path" : "recommendations",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.RecommendationEndpoint.update",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.recommendations.list" : {
+      "path" : "recommendation",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.RecommendationEndpoint.list",
+      "request" : {
+        "parameters" : {
+          "placeId" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.recommendations.insert" : {
+      "path" : "recommendations",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.RecommendationEndpoint.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.deviceinfos.remove" : {
+      "path" : "deviceinfos/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.DeviceInfoEndpoint.remove",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "shoppingassistant.deviceinfos.get" : {
+      "path" : "deviceinfos/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.DeviceInfoEndpoint.get",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.deviceinfos.update" : {
+      "path" : "deviceinfos",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.DeviceInfoEndpoint.update",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.deviceinfos.list" : {
+      "path" : "deviceinfos",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.DeviceInfoEndpoint.list",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.deviceinfos.insert" : {
+      "path" : "deviceinfos",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.DeviceInfoEndpoint.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.places.remove" : {
+      "path" : "places/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.PlaceEndpoint.remove",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "shoppingassistant.places.get" : {
+      "path" : "places/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.PlaceEndpoint.get",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.places.update" : {
+      "path" : "places",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.PlaceEndpoint.update",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.places.list" : {
+      "path" : "place",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.PlaceEndpoint.list",
+      "request" : {
+        "parameters" : {
+          "longitude" : {
+            "type" : "string",
+            "required" : true
+          },
+          "latitude" : {
+            "type" : "string",
+            "required" : true
+          },
+          "distanceInKm" : {
+            "type" : "int64",
+            "required" : true
+          },
+          "count" : {
+            "type" : "int32",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.places.insert" : {
+      "path" : "places",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.PlaceEndpoint.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.checkins.remove" : {
+      "path" : "checkins/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.CheckInEndpoint.remove",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "shoppingassistant.checkins.get" : {
+      "path" : "checkins/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.CheckInEndpoint.get",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.checkins.update" : {
+      "path" : "checkins",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.CheckInEndpoint.update",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.checkins.list" : {
+      "path" : "checkins",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.CheckInEndpoint.list",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "shoppingassistant.checkins.insert" : {
+      "path" : "checkins",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "clientIds" : [ "!!! ENTER YOUR ANDROID CLIENT ID HERE !!!", "!!! ENTER YOUR IOS CLIENT ID HERE !!!", "!!! ENTER YOUR WEB CLIENT ID HERE !!!" ],
+      "rosyMethod" : "com.google.sample.mobileassistant.CheckInEndpoint.insert",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "Offer" : {
+        "id" : "Offer",
+        "type" : "object",
+        "properties" : {
+          "title" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "imageUrl" : {
+            "type" : "string"
+          },
+          "offerID" : {
+            "type" : "string"
+          }
+        }
+      },
+      "OfferCollection" : {
+        "id" : "OfferCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Offer"
+            }
+          }
+        }
+      },
+      "Recommendation" : {
+        "id" : "Recommendation",
+        "type" : "object",
+        "properties" : {
+          "title" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "imageUrl" : {
+            "type" : "string"
+          },
+          "expiration" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "RecommendationCollection" : {
+        "id" : "RecommendationCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Recommendation"
+            }
+          }
+        }
+      },
+      "DeviceInfo" : {
+        "id" : "DeviceInfo",
+        "type" : "object",
+        "properties" : {
+          "deviceRegistrationID" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DeviceInfoCollection" : {
+        "id" : "DeviceInfoCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "DeviceInfo"
+            }
+          }
+        }
+      },
+      "Place" : {
+        "id" : "Place",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
+          "placeId" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "address" : {
+            "type" : "string"
+          },
+          "location" : {
+            "$ref" : "GeoPt"
+          },
+          "placeID" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Key" : {
+        "id" : "Key",
+        "type" : "object",
+        "properties" : {
+          "kind" : {
+            "type" : "string"
+          },
+          "appId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "parent" : {
+            "$ref" : "Key"
+          },
+          "complete" : {
+            "type" : "boolean"
+          },
+          "namespace" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GeoPt" : {
+        "id" : "GeoPt",
+        "type" : "object",
+        "properties" : {
+          "latitude" : {
+            "type" : "number",
+            "format" : "float"
+          },
+          "longitude" : {
+            "type" : "number",
+            "format" : "float"
+          }
+        }
+      },
+      "PlaceInfo" : {
+        "id" : "PlaceInfo",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
+          "placeId" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "address" : {
+            "type" : "string"
+          },
+          "location" : {
+            "$ref" : "GeoPt"
+          },
+          "distanceInKilometers" : {
+            "type" : "number"
+          },
+          "placeID" : {
+            "type" : "string"
+          }
+        }
+      },
+      "PlaceInfoCollection" : {
+        "id" : "PlaceInfoCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "PlaceInfo"
+            }
+          }
+        }
+      },
+      "CheckIn" : {
+        "id" : "CheckIn",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
+          "placeId" : {
+            "type" : "string"
+          },
+          "userEmail" : {
+            "type" : "string"
+          },
+          "checkinDate" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "CheckInCollection" : {
+        "id" : "CheckInCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "CheckIn"
+            }
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.google.sample.mobileassistant.OfferEndpoint.remove" : {
+      },
+      "com.google.sample.mobileassistant.OfferEndpoint.get" : {
+        "response" : {
+          "$ref" : "Offer"
+        }
+      },
+      "com.google.sample.mobileassistant.OfferEndpoint.update" : {
+        "request" : {
+          "$ref" : "Offer"
+        },
+        "response" : {
+          "$ref" : "Offer"
+        }
+      },
+      "com.google.sample.mobileassistant.OfferEndpoint.list" : {
+        "response" : {
+          "$ref" : "OfferCollection"
+        }
+      },
+      "com.google.sample.mobileassistant.OfferEndpoint.insert" : {
+        "request" : {
+          "$ref" : "Offer"
+        },
+        "response" : {
+          "$ref" : "Offer"
+        }
+      },
+      "com.google.sample.mobileassistant.RecommendationEndpoint.remove" : {
+      },
+      "com.google.sample.mobileassistant.RecommendationEndpoint.get" : {
+        "response" : {
+          "$ref" : "Recommendation"
+        }
+      },
+      "com.google.sample.mobileassistant.RecommendationEndpoint.update" : {
+        "request" : {
+          "$ref" : "Recommendation"
+        },
+        "response" : {
+          "$ref" : "Recommendation"
+        }
+      },
+      "com.google.sample.mobileassistant.RecommendationEndpoint.list" : {
+        "response" : {
+          "$ref" : "RecommendationCollection"
+        }
+      },
+      "com.google.sample.mobileassistant.RecommendationEndpoint.insert" : {
+        "request" : {
+          "$ref" : "Recommendation"
+        },
+        "response" : {
+          "$ref" : "Recommendation"
+        }
+      },
+      "com.google.sample.mobileassistant.DeviceInfoEndpoint.remove" : {
+      },
+      "com.google.sample.mobileassistant.DeviceInfoEndpoint.get" : {
+        "response" : {
+          "$ref" : "DeviceInfo"
+        }
+      },
+      "com.google.sample.mobileassistant.DeviceInfoEndpoint.update" : {
+        "request" : {
+          "$ref" : "DeviceInfo"
+        },
+        "response" : {
+          "$ref" : "DeviceInfo"
+        }
+      },
+      "com.google.sample.mobileassistant.DeviceInfoEndpoint.list" : {
+        "response" : {
+          "$ref" : "DeviceInfoCollection"
+        }
+      },
+      "com.google.sample.mobileassistant.DeviceInfoEndpoint.insert" : {
+        "request" : {
+          "$ref" : "DeviceInfo"
+        },
+        "response" : {
+          "$ref" : "DeviceInfo"
+        }
+      },
+      "com.google.sample.mobileassistant.PlaceEndpoint.remove" : {
+      },
+      "com.google.sample.mobileassistant.PlaceEndpoint.get" : {
+        "response" : {
+          "$ref" : "Place"
+        }
+      },
+      "com.google.sample.mobileassistant.PlaceEndpoint.update" : {
+        "request" : {
+          "$ref" : "Place"
+        },
+        "response" : {
+          "$ref" : "Place"
+        }
+      },
+      "com.google.sample.mobileassistant.PlaceEndpoint.list" : {
+        "response" : {
+          "$ref" : "PlaceInfoCollection"
+        }
+      },
+      "com.google.sample.mobileassistant.PlaceEndpoint.insert" : {
+        "request" : {
+          "$ref" : "Place"
+        },
+        "response" : {
+          "$ref" : "Place"
+        }
+      },
+      "com.google.sample.mobileassistant.CheckInEndpoint.remove" : {
+      },
+      "com.google.sample.mobileassistant.CheckInEndpoint.get" : {
+        "response" : {
+          "$ref" : "CheckIn"
+        }
+      },
+      "com.google.sample.mobileassistant.CheckInEndpoint.update" : {
+        "request" : {
+          "$ref" : "CheckIn"
+        },
+        "response" : {
+          "$ref" : "CheckIn"
+        }
+      },
+      "com.google.sample.mobileassistant.CheckInEndpoint.list" : {
+        "response" : {
+          "$ref" : "CheckInCollection"
+        }
+      },
+      "com.google.sample.mobileassistant.CheckInEndpoint.insert" : {
+        "request" : {
+          "$ref" : "CheckIn"
+        },
+        "response" : {
+          "$ref" : "CheckIn"
+        }
+      }
+    }
+  }
+}
